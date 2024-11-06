@@ -22,7 +22,7 @@
             Grid.Row="0"
             Margin="10"
             Orientation="Horizontal">
-            <TextBlock VerticalAlignment="Center" Text="Поиск по имени: " />
+            <TextBlock VerticalAlignment="Center" Text="Поиск: " />
             <TextBox
                 x:Name="SearchBox"
                 Width="200"
@@ -64,7 +64,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <!--  Кнопки управления сотрудниками  -->
+        <!--  Кнопки управления  -->
         <StackPanel
             Grid.Row="2"
             Margin="10"

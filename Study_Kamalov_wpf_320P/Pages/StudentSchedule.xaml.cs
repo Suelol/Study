@@ -42,5 +42,15 @@ namespace Study_Kamalov_wpf_320P.Pages
         {
             NavigationService.Navigate(new AuthPage());
         }
+
+        private void ExportToExcel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

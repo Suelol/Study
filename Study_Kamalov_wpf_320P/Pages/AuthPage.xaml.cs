@@ -51,9 +51,10 @@ namespace Study_Kamalov_wpf_320P.Pages
 
                 if (user != null)
                 {
-
                     MessageBox.Show($"Добро пожаловать, {user.Surname}!", "Успешная авторизация");
 
+                    if (user.Doljnost == "инженер")
+                        NavigationService.Navigate(new EmployeesPage());
                 }
                 else
                 {
