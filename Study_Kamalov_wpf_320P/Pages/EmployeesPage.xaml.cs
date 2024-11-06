@@ -43,8 +43,7 @@ namespace Study_Kamalov_wpf_320P.Pages
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            // Здесь нужно реализовать логику добавления нового сотрудника
-            MessageBox.Show("Функция добавления сотрудника еще не реализована");
+            NavigationService.Navigate(new AddEmployeePage());
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
@@ -52,8 +51,7 @@ namespace Study_Kamalov_wpf_320P.Pages
             var selectedEmployee = EmployeesGrid.SelectedItem as Employee;
             if (selectedEmployee != null)
             {
-                // Здесь нужно реализовать логику редактирования сотрудника
-                MessageBox.Show($"Редактирование сотрудника: {selectedEmployee.Surname}");
+                NavigationService.Navigate(new EditEmployeePage(selectedEmployee));
             }
             else
             {
@@ -115,6 +113,16 @@ namespace Study_Kamalov_wpf_320P.Pages
         private void EmployeesGrid_SelectionChanged(object sender, SelectionChangedEventArgs args)
         {
             // Этот метод можно использовать, если нужно выполнить какие-то действия при выборе сотрудника
+        }
+
+        private void Discipline_Go(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new DisciplinesPage());
+        }
+
+        private void Kafedra_Go(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new KafedrasPage());
         }
     }
 }

@@ -162,11 +162,43 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddDisciplinePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddEmployeePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddKafedraPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AuthPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\DisciplinesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EditDisciplinePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EditEmployeePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EditKafedraPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EmployeesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KafedrasPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,11 +212,35 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AddDisciplinePage.xaml.cs">
+      <DependentUpon>AddDisciplinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEmployeePage.xaml.cs">
+      <DependentUpon>AddEmployeePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddKafedraPage.xaml.cs">
+      <DependentUpon>AddKafedraPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DisciplinesPage.xaml.cs">
+      <DependentUpon>DisciplinesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditDisciplinePage.xaml.cs">
+      <DependentUpon>EditDisciplinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditEmployeePage.xaml.cs">
+      <DependentUpon>EditEmployeePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditKafedraPage.xaml.cs">
+      <DependentUpon>EditKafedraPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EmployeesPage.xaml.cs">
       <DependentUpon>EmployeesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KafedrasPage.xaml.cs">
+      <DependentUpon>KafedrasPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\QR-Kod.xaml.cs">
       <DependentUpon>QR-Kod.xaml</DependentUpon>
