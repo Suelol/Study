@@ -82,14 +82,19 @@
             HorizontalAlignment="Left"
             Orientation="Horizontal">
             <Button
+                x:Name="AddButton"
                 Margin="0,0,10,0"
                 Click="AddButton_Click"
                 Content="Добавить" />
             <Button
+                x:Name="EditButton"
                 Margin="0,0,10,0"
                 Click="EditButton_Click"
                 Content="Редактировать" />
-            <Button Click="DeleteButton_Click" Content="Удалить" />
+            <Button
+                x:Name="DeleteButton"
+                Click="DeleteButton_Click"
+                Content="Удалить" />
         </StackPanel>
     </Grid>
 </Page>

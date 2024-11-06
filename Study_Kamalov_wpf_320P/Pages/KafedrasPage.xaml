@@ -32,11 +32,8 @@
 
         <DataGrid
             x:Name="KafedrasGrid"
-            Grid.Row="2"
-            Margin="0,0,0,10"
             AutoGenerateColumns="False"
-            IsReadOnly="True"
-            SelectionMode="Single">
+            IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn
                     Width="100"
@@ -48,7 +45,7 @@
                     Header="Название" />
                 <DataGridTextColumn
                     Width="150"
-                    Binding="{Binding Faculty.Name_faculty}"
+                    Binding="{Binding Facultet}"
                     Header="Факультет" />
             </DataGrid.Columns>
         </DataGrid>

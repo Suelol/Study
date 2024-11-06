@@ -34,11 +34,9 @@ namespace Study_Kamalov_wpf_320P.Pages
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-
             string password = PasswordBox.Password;
 
-            // Проверяем, не пустые ли поля логина и пароля
-            if ( string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка авторизации");
                 return;
@@ -46,15 +44,27 @@ namespace Study_Kamalov_wpf_320P.Pages
 
             try
             {
-                // Проверяем логин и пароль на соответствие с данными из БД
                 var user = ConnectionHelper.db.Employee.FirstOrDefault(u => u.Tab_number.ToString() == password);
 
                 if (user != null)
                 {
                     MessageBox.Show($"Добро пожаловать, {user.Surname}!", "Успешная авторизация");
 
-                    if (user.Doljnost == "инженер")
-                        NavigationService.Navigate(new EmployeesPage());
+                    switch (user.Doljnost)
+                    {
+                        case "инженер":
+                            NavigationService.Navigate(new EmployeesPage());
+                            break;
+                        case "преподаватель":
+                            NavigationService.Navigate(new StudentSchedule(false));
+                            break;
+                        case "зав. кафедрой":
+                            NavigationService.Navigate(new EmployeesPage(user.Tab_number, user.Shifr));
+                            break;
+                        default:
+                            MessageBox.Show("Неизвестная должность", "Ошибка");
+                            break;
+                    }
                 }
                 else
                 {

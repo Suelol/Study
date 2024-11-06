@@ -21,13 +21,36 @@ namespace Study_Kamalov_wpf_320P.Pages
     /// </summary>
     public partial class StudentSchedule : Page
     {
-        public StudentSchedule()
+        private bool _showButtons;
+
+        public StudentSchedule(bool showButtons = true)
         {
             InitializeComponent();
-
+            _showButtons = showButtons;
             LoadData();
+            SetButtonsVisibility();
         }
 
+        private void SetButtonsVisibility()
+        {
+            // Скрываем все кнопки кроме кнопки "Назад", если _showButtons = false
+            if (!_showButtons)
+            {
+                // Предполагая, что у вас есть кнопки с такими именами
+                // Измените имена в соответствии с вашими реальными именами кнопок
+                if (FindName("AddButton") is Button addButton)
+                    addButton.Visibility = Visibility.Collapsed;
+
+                if (FindName("EditButton") is Button editButton)
+                    editButton.Visibility = Visibility.Collapsed;
+
+                if (FindName("DeleteButton") is Button deleteButton)
+                    deleteButton.Visibility = Visibility.Collapsed;
+
+                if (FindName("ExportButton") is Button exportButton)
+                    exportButton.Visibility = Visibility.Collapsed;
+            }
+        }
         private void LoadData()
         {
             // Загружаем данные из БД и сортируем по названию

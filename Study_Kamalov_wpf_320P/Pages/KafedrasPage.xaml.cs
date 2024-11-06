@@ -17,11 +17,18 @@ namespace Study_Kamalov_wpf_320P.Pages
 
         private void LoadData()
         {
-            var kafedras = ConnectionHelper.db.Kafedra
-                .Include("Faculty") // Изменено здесь
-                .OrderBy(k => k.Name_kaf)
-                .ToList();
-            KafedrasGrid.ItemsSource = kafedras;
+            try
+            {
+                var kafedras = ConnectionHelper.db.Kafedra
+                    .OrderBy(k => k.Name_kaf)
+                    .ToList();
+
+                KafedrasGrid.ItemsSource = kafedras;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
+            }
         }
 
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -29,10 +36,9 @@ namespace Study_Kamalov_wpf_320P.Pages
             string searchText = SearchBox.Text.ToLower();
 
             var filtered = ConnectionHelper.db.Kafedra
-                .Include("Faculty") // Изменено здесь
                 .Where(k => k.Name_kaf.ToLower().Contains(searchText) ||
-                            k.Shifr.ToLower().Contains(searchText) ||
-                            (k.Faculty != null && k.Faculty.Name_faculty.ToLower().Contains(searchText)))
+                           k.Shifr.ToLower().Contains(searchText) ||
+                           k.Facultet.ToLower().Contains(searchText))
                 .OrderBy(k => k.Name_kaf)
                 .ToList();
 
