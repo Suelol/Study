@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="50a7431aec5244d6bb1dce58c049e2a4" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Academicians" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Animals_Kamalov" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Countries" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Countries_Kamalov" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Discipline" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Employee" Width="1.5" PointX="5.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Enginer" Width="1.5" PointX="7.5" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Exsamen" Width="1.5" PointX="9.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Faculty" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Flowers_Kamalov" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Gimnazisti" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Kafedra" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Management_Kamalov" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Speciality" Width="1.5" PointX="5.25" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Student" Width="1.5" PointX="7.5" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Teacher" Width="1.5" PointX="7.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Ucheniki" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.user" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Zav_kaf" Width="1.5" PointX="7.5" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Study_Baza_Kamalov_320PModel.Zayavka" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Discipline_Kafedra" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Exsamen_Discipline" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Zayavka_Discipline" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Employee_Kafedra" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Enginer_Employee1" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Exsamen_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Teacher_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Zav_kaf_Employee1" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Exsamen_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Kafedra_Faculty" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Speciality_Kafedra" ManuallyRouted="false" />
+        <AssociationConnector Association="Study_Baza_Kamalov_320PModel.FK_Student_Speciality" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
