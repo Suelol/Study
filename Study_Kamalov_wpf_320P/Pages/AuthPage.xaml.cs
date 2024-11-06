@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Study_Kamalov_wpf_320P.Connection;
+using Study_Kamalov_wpf_320P.DbModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +30,45 @@ namespace Study_Kamalov_wpf_320P.Pages
         private void ToQrCodePage(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new QR_Kod());
+        }
+
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            string password = PasswordBox.Password;
+
+            // Проверяем, не пустые ли поля логина и пароля
+            if ( string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка авторизации");
+                return;
+            }
+
+            try
+            {
+                // Проверяем логин и пароль на соответствие с данными из БД
+                var user = ConnectionHelper.db.Employee.FirstOrDefault(u => u.Tab_number.ToString() == password);
+
+                if (user != null)
+                {
+
+                    MessageBox.Show($"Добро пожаловать, {user.Surname}!", "Успешная авторизация");
+
+                }
+                else
+                {
+                    MessageBox.Show("Неправильный логин или пароль", "Ошибка авторизации");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка");
+            }
+        }
+
+        private void LoginTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

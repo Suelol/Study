@@ -8,7 +8,7 @@
     Title="AuthPage"
     d:DesignHeight="450"
     d:DesignWidth="800"
-    Background="AliceBlue"
+    Background="#7febe9"
     mc:Ignorable="d">
 
     <Grid>
@@ -35,20 +35,6 @@
             FontWeight="Bold"
             Text="Авторизация" />
 
-        <!--  Поле для логина  -->
-        <TextBlock
-            Grid.Row="1"
-            Margin="0,0,10,0"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Text="Логин:" />
-        <TextBox
-            Name="LoginTextBox"
-            Grid.Row="1"
-            Grid.Column="1"
-            Width="200"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Center" />
 
         <!--  Поле для пароля  -->
         <TextBlock
@@ -56,12 +42,12 @@
             Margin="0,0,10,0"
             HorizontalAlignment="Right"
             VerticalAlignment="Center"
-            Text="Пароль:" />
+            Text="Пароль:" RenderTransformOrigin="0.035,0.536" />
         <PasswordBox
-            Name="PasswordBox"
+            x:Name="PasswordBox"
             Grid.Row="2"
             Grid.Column="1"
-            Width="200"
+            Width="75"
             HorizontalAlignment="Left"
             VerticalAlignment="Center" />
 
@@ -72,6 +58,9 @@
             Width="100"
             Margin="0,20,0,0"
             HorizontalAlignment="Center"
+            Click="LoginBtn_Click"
+            Background="#3492eb"
+            Foreground="White" 
             Content="Войти" />
 
         <Button
@@ -79,9 +68,11 @@
             Grid.ColumnSpan="2"
             Width="100"
             Height="20"
-            Click="ToQrCodePage"
             Margin="0,20,0,0"
             HorizontalAlignment="Center"
+            Background="#3492eb"
+            Foreground="White" 
+            Click="ToQrCodePage"
             Content="QR" />
 
     </Grid>
